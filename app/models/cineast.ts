@@ -1,12 +1,18 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column } from '@adonisjs/lucid/orm'
 
-export default class Role extends BaseModel {
+export default class Cineast extends BaseModel {
   @column({ isPrimary: true })
   declare id: number
 
   @column()
-  declare name: string
+  declare firstName: string
+
+  @column()
+  declare lastName: string
+
+  @column()
+  declare headshotUrl: string
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
